@@ -1,0 +1,12 @@
+.login-btn{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.create-btn{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}

@@ -1,0 +1,44 @@
+const users =[];
+function dispMessage() {
+    let email = document.getElementById("txtEmail").value;
+    let password = document.getElementById("txtPassword").value;
+    let found =users.forEach(element)=>element.email === email && element.password === password
+   
+}
+function addUser() {
+  let name = document.getElementById("txtName").value;
+  let email = document.getElementById("txtEmail").value;
+  let password = document.getElementById("txtPassword").value;
+  let user = { name: name, email: email, password: password };
+  users.push(user);
+  showLoginForm();
+  console.log(users);
+}
+
+function showLoginForm() {
+  let str = `
+    <h3>Login Form</h3>
+      <p><label id="lblMessage"></label></p>
+      <p><input type="text" id="txtEmail" placeholder="Email Address" /></p>
+      <p><input type="password" id="txtPassword" placeholder="Password" /></p>
+      <p><button class="login-btn" onclick="dispMessage()">Log In</button></p>
+      <hr>
+      <p><button class="register-btn" onclick="showRegisterForm()">Create Account</button></p>
+    `;
+  root.innerHTML = str;
+}
+
+function showRegisterForm() {
+  let str = `
+     <h3>Registration Form</h3>
+     <p><label id="lblMessage"></label></p>
+     <p><input type="text" id="txtName" placeholder="Enter Name" /></p>
+      <p><input type="text" id="txtEmail" placeholder="Email Address" /></p>
+      <p><input type="password" id="txtPassword" placeholder="Password" /></p>
+      <p><button class="login-btn" onclick="addUser()">Submit</button></p>
+      <hr>
+      <p>Already a member?<a href="#" onclick="showLoginForm()">Login here</a></p>
+
+    `;
+  root.innerHTML = str;
+}

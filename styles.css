@@ -2,7 +2,7 @@
                 padding: 0px;
                 display: flex;
                 justify-content: space-between;
-                background-color: pink;
+                background-color: lightcoral;
                 color: white;
             }
 
@@ -28,4 +28,10 @@
             .menu li.a{
                 text-decoration: none;
                 color: white;
+            }
+            .box{
+                margin: 10px;
+                border: 1px grey solid;
+                padding: 10px;
+                color: black;
             }
